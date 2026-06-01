@@ -1,5 +1,5 @@
 
-public class MemoriaEstatic {
+public class Cadeia {
     public static void main (String[] args){
         
         String[] fruta = {"Banana", "Morago", "Abacate"};
