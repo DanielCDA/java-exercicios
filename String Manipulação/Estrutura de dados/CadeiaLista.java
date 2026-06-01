@@ -39,7 +39,11 @@ public class CadeiaLista {
         frutas.remove("abacaxi"); // remove o elemento "abacaxi" da lista
         System.out.println("Frutas apos remover o elemento na posicao 4, e o elemento 'abacaxi': " + frutas);
         frutas.sort(null); // ordena a lista de frutas em ordem alfabetica
-        System.out.println("Frutas ordenadas: " + frutas);
+        frutas.stream().filter(fruta -> fruta.startsWith("m")).forEach(System.out::println); // filtra as frutas que começam com a letra "m" e imprime cada uma delas
+        System.out.println();
+        frutas.forEach(System.out::println);
+
+
 
 
 
