@@ -27,6 +27,9 @@ public class Cao extends Animal {
         System.out.println("Raca: " + raca);
     }
 
+    public void dormir() {
+        System.out.println(getNome() + " esta dormindo...");
+    }
 
 
     public static void main(String[] args) {
