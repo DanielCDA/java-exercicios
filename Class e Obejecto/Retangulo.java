@@ -23,14 +23,14 @@ public class Retangulo {
         Retangulo retangulo1 = new Retangulo(5.0, 3.0);
         Retangulo retangulo2 = new Retangulo(4.0, 6.0);
 
-        System.out.println("Retângulo 1:");
-        System.out.println("Área: " + retangulo1.calcularArea());
-        System.out.println("Perímetro: " + retangulo1.calcularPerimetro());
+        System.out.println("Retangulo 1:");
+        System.out.println("area: " + retangulo1.calcularArea());
+        System.out.println("Perimetro: " + retangulo1.calcularPerimetro());
 
         System.out.println();
 
-        System.out.println("Retângulo 2:");
-        System.out.println("Área: " + retangulo2.calcularArea());
-        System.out.println("Perímetro: " + retangulo2.calcularPerimetro());
+        System.out.println("Retangulo 2:");
+        System.out.println("area: " + retangulo2.calcularArea());
+        System.out.println("Perimetro: " + retangulo2.calcularPerimetro());
     }
 }
