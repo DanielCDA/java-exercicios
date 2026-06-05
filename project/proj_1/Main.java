@@ -4,5 +4,7 @@ public class Main {
         System.out.println(usuario);
         Livro livro = new Livro("123456789", "Java Programming", "John Doe");
         System.out.println(livro);
+        ItemAcervo item = new ItemAcervo("001", "Java Programming");
+        System.out.println(item);
     }
 }
