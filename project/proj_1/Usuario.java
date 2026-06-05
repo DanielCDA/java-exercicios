@@ -1,5 +1,5 @@
 public class Usuario {
-    private static int id = 1;
+    private static int id = 0;
     private String nome;
     private String Email;
 
@@ -8,6 +8,14 @@ public class Usuario {
         this.Email = Email;
         this.id++;  
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
 
     public String getNome() {
         return nome;

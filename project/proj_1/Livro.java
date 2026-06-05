@@ -1,5 +1,3 @@
-
-
 public class Livro {
     private static final int Max_Livros = 4;
     private final String isbn;
@@ -37,6 +35,9 @@ public class Livro {
         return autor;
     }
 
+    public String toString(){
+        return "ISBN:" + isbn + ", Titulo: " + titulo + ", Autor: " + autor + ", Disponivel: " + disponivel;
+    }
 
 
 
