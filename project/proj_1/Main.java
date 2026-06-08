@@ -1,3 +1,5 @@
+
+
 public class Main {
     public static void main(String[] args) {
         Usuario usuario = new Usuario("Alice", "alice@example.com");
@@ -6,5 +8,7 @@ public class Main {
         System.out.println(livro);
         ItemAcervo item = new ItemAcervo("001", "Java Programming");
         System.out.println(item);
+
+        
     }
 }
