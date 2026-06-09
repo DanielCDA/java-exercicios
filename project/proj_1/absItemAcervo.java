@@ -1,4 +1,4 @@
-public class ItemAcervo {
+public class absItemAcervo {
     private final String codigo;
     private String titulo;
     private boolean disponivel = true;
