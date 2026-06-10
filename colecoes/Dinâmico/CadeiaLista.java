@@ -42,12 +42,5 @@ public class CadeiaLista {
         frutas.stream().filter(fruta -> fruta.startsWith("m")).forEach(System.out::println); // filtra as frutas que começam com a letra "m" e imprime cada uma delas
         System.out.println();
         frutas.forEach(System.out::println);
-
-
-
-
-
-
-
     }
 }
