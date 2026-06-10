@@ -1,22 +1,11 @@
-public class Livro {
+public class Livro extends ItemAcervo {
     private static final int Max_Livros = 4;
-    private final String isbn;
-    private String titulo;
+    private String isbn;
     private String autor;
-    private boolean disponivel = true;
 
     public Livro(String isbn, String titulo, String autor) {
-        this.isbn = isbn;
-        this.titulo = titulo;
+        super(isbn, titulo);
         this.autor = autor;
-    }
-
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
-    }
-
-    public void setTitulo(String titulo){
-        this.titulo = titulo;
     }
 
     public void setAutor(String autor){
@@ -27,16 +16,17 @@ public class Livro {
         return isbn;
     }
 
-    public String getTitulo(){
-        return titulo;
-    }
-
     public String getAutor(){
         return autor;
     }
 
+    @Override
+    public int getPrazoDias() {
+        return 14;
+    }
+
     public String toString(){
-        return "ISBN:" + isbn + ", Titulo: " + titulo + ", Autor: " + autor + ", Disponivel: " + disponivel;
+        return "ISBN:" + isbn + ", Autor: " + autor;
     }
 
 

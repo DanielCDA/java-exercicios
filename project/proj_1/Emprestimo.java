@@ -1,5 +1,6 @@
 public class Emprestimo {
-    private final int id = 1;
+    private static int contadorId = 1;
+    private final int id;
     private Usuario usuario;
     private  ItemAcervo item;
     private String dataEmprestimo;
@@ -10,17 +11,27 @@ public class Emprestimo {
     {
         this.usuario = usuario;
         this.item = item;
-        this.id += 1;
+        this.id = contadorId++;
         this.dataEmprestimo = hoje();
         item.emprestar();
     }
 
-    public Emprestimo(Usuario u, ItemAcervo i, String obs) { }
-
-    public boolean isAtrasado(String dataAtual){
-        return dataAtual > dataDevolucao;
+    public int getId() {
+        return id;
     }
 
+    
+    public boolean isAtrasado(String dataAtual) {
+        if (dataDevolucao == null) return false;
+        return dataAtual.compareTo(dataDevolucao) > 0;
+    }
+
+    public void devolver() {
+        if (devolvido) throw new IllegalStateException("Já foi devolvido");
+        this.devolvido = true;
+        this.dataDevolucao = hoje();
+        item.devolver(); // libera o item no acervo
+    }
     @Override
     public String toString(){
         return "Id: " + id + " Usuario: " + usuario + "item: " + item + "";

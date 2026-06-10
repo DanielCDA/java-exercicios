@@ -1,4 +1,4 @@
-public class absItemAcervo {
+public abstract class ItemAcervo {
     private final String codigo;
     private String titulo;
     private boolean disponivel = true;
@@ -7,14 +7,24 @@ public class absItemAcervo {
         this.codigo = codigo;
         this.titulo = titulo;
     }
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
+    public void emprestar() {
+        if (!disponivel) throw new IllegalStateException("Item indisponível");
+        this.disponivel = false;
+    }
+
+    public void devolver() {
+        this.disponivel = true;
     }
     public String getCodigo() {
         return codigo;
     }
     public String getTitulo() {
         return titulo;
+    }
+
+    public int getPrazoDias()
+    {
+        return 0; // padrão, subclasses devem sobrescrever
     }
     public boolean isDisponivel() {
         return disponivel;
