@@ -1,5 +1,3 @@
-
-
 public abstract class Animal {
     // Consiste em privatizar os atributos de uma classe e fornecer 
     // métodos públicos para acessar e modificar esses atributos.
