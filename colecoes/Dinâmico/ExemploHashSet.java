@@ -1,3 +1,6 @@
+import java.util.*;
+
+
 public class ExemploHashSet {
     public static void main(String[] args) {
         // Criando HashSet
