@@ -1,6 +1,7 @@
 import java.util.*;
 
-//FilaAtendimento
+//FilaAtendimento Primemiro a entrar primeiro a sair (FIFO) porem, podemos simular um caixa 
+// prioritário, onde pessoas com prioridade são atendidas primeiro, mesmo que tenham chegado depois.
 public class ExemploQueue {
      private Queue<String> fila = new LinkedList<>();
     private int contadorSenha = 1;
