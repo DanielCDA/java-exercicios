@@ -17,8 +17,9 @@ public class Box <T> {
         return item;
     }
 
-    public void put(T item) {
-        this.item = item;
+    // Método put que aceita Optional (Java 9+)
+    public void put(Optional<T> optionalItem) {
+        this.item = optionalItem.orElse(null);
     }
 
     public Optional<T> getOptionalItem() {
