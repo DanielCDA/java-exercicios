@@ -11,14 +11,15 @@ public class ExemploFunctionalInterfaces {
         Predicate<String> vasio = s -> s.isEmpty();
         Predicate<String> isLong = s -> s.length() > 8;
 
-        System.out.println("A palavra esta" + vasio.test("muito bom"));
-        System.out.println(isLong.test("brite"));
+        System.out.println("A palavra esta he " + vasio.test("muito bom"));
+        System.out.println(isLong.test("brite he bom estudar para entender que estas a fazer"));
 
-        System.out.println("----------------------------------------------------------");
+        System.out.println("___________________________________");
 
         // Function — transforma String em Integer
         Function<String, Integer> tamanho = s -> s.length();
-        tamanho.apply("Java"); // 4
+         // 4
+        System.out.println(tamanho.apply("Java"));
 
         System.out.println("_________________________________________________________________");
 
@@ -30,7 +31,7 @@ public class ExemploFunctionalInterfaces {
 
         // Supplier — fornece um valor quando chamado
         Supplier<String> mensagem = () -> "Gerado agora: " + Math.random();
-        mensagem.get();
+        System.out.println(mensagem.get());
 
 
     }
