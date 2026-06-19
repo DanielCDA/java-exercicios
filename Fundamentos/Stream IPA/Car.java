@@ -11,6 +11,7 @@ public class Car {
         carros.add("LExus");
         carros.add("BMw");
         carros.add("Ford");
+        carros.add("LExus");
 
         System.out.println("== Novos Streams ==");
 
@@ -27,6 +28,11 @@ public class Car {
         System.out.println("\n == Usando Map ==");
         carros.stream()
         .map(String::toUpperCase)
+        .forEach(carro -> System.err.println(" " + carro));
+
+        System.out.println("\n == Usando distinct ==");
+        carros.stream()
+        .distinct()
         .forEach(carro -> System.err.println(" " + carro));
 
     }
