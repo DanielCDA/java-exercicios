@@ -1,19 +1,21 @@
 
-import java.util.LinkedList;
+
+import java.util.*;
 
 
 public class Car {
     public static void main(String[] args) {
-        LinkedList<String> carro = new LinkedList();
-        carro.add("Merceds");
-        carro.add("Toyota");
-        carro.add("LExus");
-        carro.add("BMw");
-        carro.add("Fors");
+        LinkedList<String> carros = new LinkedList<>();
+        carros.add("Merceds");
+        carros.add("Toyota");
+        carros.add("LExus");
+        carros.add("BMw");
+        carros.add("Fors");
 
         System.out.println("== Novos Streams ==");
 
-        //
+        //usando o forEach
+        carros.stream().forEach(carro -> System.out.println(carro));
 
     }
     
