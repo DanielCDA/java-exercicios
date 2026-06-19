@@ -23,26 +23,26 @@ public class Nome {
              .forEach(nome -> System.out.println("   " + nome));
         
         // 3. map - Transformar os elementos
-        System.out.println("\n3. map - Converter para MAIÚSCULAS:");
+        System.out.println("\n3. map - Converter para MAIUSCULAS:");
         nomes.stream()
              .map(String::toUpperCase)
              .forEach(nome -> System.out.println("   " + nome));
         
         // 4. filter + map - Combinação de operações
-        System.out.println("\n4. filter + map - Nomes com mais de 4 caracteres em maiúsculas:");
+        System.out.println("\n4. filter + map - Nomes com mais de 4 caracteres em maiusculas:");
         nomes.stream()
              .filter(nome -> nome.length() > 4)
              .map(String::toUpperCase)
              .forEach(nome -> System.out.println("   " + nome));
         
         // 5. distinct - Remover duplicatas
-        System.out.println("\n5. distinct - Nomes únicos:");
+        System.out.println("\n5. distinct - Nomes unicos:");
         nomes.stream()
              .distinct()
              .forEach(nome -> System.out.println("   " + nome));
         
         // 6. sorted - Ordenar
-        System.out.println("\n6. sorted - Nomes em ordem alfabética:");
+        System.out.println("\n6. sorted - Nomes em ordem alfabetica:");
         nomes.stream()
              .sorted()
              .forEach(nome -> System.out.println("   " + nome));
@@ -72,7 +72,7 @@ public class Nome {
         System.out.println("   " + (temB ? "SIM" : "NÃO"));
         
         // 11. allMatch - Verificar se todos atendem a condição
-        System.out.println("\n11. allMatch - Todos têm mais de 2 caracteres?");
+        System.out.println("\n11. allMatch - Todos tem mais de 2 caracteres?");
         boolean todosGrandes = nomes.stream()
                                     .allMatch(nome -> nome.length() > 2);
         System.out.println("   " + (todosGrandes ? "SIM" : "NÃO"));
@@ -82,7 +82,23 @@ public class Nome {
         String primeiro = nomes.stream()
                               .filter(nome -> nome.startsWith("D"))
                               .findFirst()
-                              .orElse("Não encontrado");
+                              .orElse("Nao encontrado");
         System.out.println("   " + primeiro);
     }
+
 }
+
+
+// Operações demonstradas:
+// forEach - Percorrer elementos
+// filter - Filtrar com condições
+// map - Transformar elementos
+// filter + map - Combinação de operações
+// distinct - Remover duplicatas
+// sorted - Ordenar elementos
+// limit - Limitar quantidade
+// count - Contar elementos
+// collect - Coletar em outra estrutura
+// anyMatch - Verificar se existe elemento que atende condição
+// allMatch - Verificar se todos atendem condição
+// findFirst - Encontrar primeiro elemento
